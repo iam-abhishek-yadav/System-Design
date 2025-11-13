@@ -11,6 +11,22 @@ In short: What are the building blocks, how do they talk to each other, and why 
 
 ## How to Approach
 
+```mermaid
+flowchart TD
+    A[Understand Problem Statement] --> B[Break into Components]
+    B --> C[Pick One Component]
+    C --> D[Analyze Component Details]
+    D --> E{Need Subcomponents?}
+    E -->|Yes| F[Create Subcomponents]
+    F --> D
+    E -->|No| G[Move to Next Component]
+    G --> C
+    D --> H[Database & Caching]
+    D --> I[Scaling & Fault Tolerance]
+    D --> J[Asynchronous Processing]
+    D --> K[Communication]
+```
+
 1. Understand the problem statement
    - What are we trying to build?
    - Who is it for?
@@ -46,6 +62,29 @@ In short: What are the building blocks, how do they talk to each other, and why 
 
 
 ## How to Know You Have Built a Good System
+
+```mermaid
+graph TB
+    A[System Design Quality Checklist] --> B[Component Breakdown]
+    A --> C[Clear Responsibilities]
+    A --> D[Detailed Design]
+    A --> E[Solid Components]
+    
+    B --> B1[Not one big block]
+    B --> B2[Each piece identifiable]
+    
+    C --> C1[No random extra work]
+    C --> C2[Describable in 1-2 sentences]
+    
+    D --> D1[Data storage defined]
+    D --> D2[Communication defined]
+    D --> D3[Load behavior defined]
+    D --> D4[Failure handling defined]
+    
+    E --> E1[Scalable]
+    E --> E2[Fault-tolerant]
+    E --> E3[Available]
+```
 
 1. The system is broken down into components
    - The design is not just one big block that "does everything"
