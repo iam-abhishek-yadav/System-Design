@@ -1,7 +1,6 @@
 ## Non-Relational Databases
 
-Non-relational databases (NoSQL) do not follow the traditional SQL relational model.  
-They are designed for flexible schemas and `horizontal scaling (sharding) out of the box`.
+Non-relational databases (NoSQL) do not follow the traditional SQL relational model. They are designed for flexible schemas and `horizontal scaling (sharding) out of the box`.
 
 ```mermaid
 graph TB
@@ -28,8 +27,9 @@ graph TB
 
 The three main categories are:
 
-### Document Databases
-`Examples:` MongoDB, Elasticsearch
+### 1. Document Databases
+
+**Examples:** MongoDB, Elasticsearch
 
 ```mermaid
 mindmap
@@ -47,21 +47,22 @@ mindmap
       Logging & Search
 ```
 
-`Characteristics`
-- Store data as JSON or JSON-like documents.
-- Support complex queries (similar to relational DBs).
-- Allow partial updates to documents.
-- Flexible schema; closest NoSQL type to relational databases.
-- Good for unstructured or semi-structured data.
+**Characteristics:**
+- Store data as JSON or JSON-like documents
+- Support complex queries (similar to relational DBs)
+- Allow partial updates to documents
+- Flexible schema; closest NoSQL type to relational databases
+- Good for unstructured or semi-structured data
 
-`Use cases`
-- User profiles  
-- Content management  
-- Product catalogs  
+**Use cases:**
+- User profiles
+- Content management
+- Product catalogs
 - Logging and search (Elasticsearch)
 
-### Key-Value Stores
-`Examples:` Redis, DynamoDB, Aerospike
+### 2. Key-Value Stores
+
+**Examples:** Redis, DynamoDB, Aerospike
 
 ```mermaid
 graph LR
@@ -82,25 +83,25 @@ graph LR
     style G fill:#e1f5ff
 ```
 
-`Characteristics`
-- Extremely simple model: `GET`, `PUT`, `DELETE`.
-- Designed for key-based access patterns.
-- Do not support complex queries (no aggregations or joins).
-- Can be heavily sharded and partitioned.
-- High throughput and low latency.
+**Characteristics:**
+- Extremely simple model: `GET`, `PUT`, `DELETE`
+- Designed for key-based access patterns
+- Do not support complex queries (no aggregations or joins)
+- Can be heavily sharded and partitioned
+- High throughput and low latency
 
-`Use cases`
-- Profile data  
-- Auth/session data  
-- Caching  
-- Order lookups  
+**Use cases:**
+- Profile data
+- Auth/session data
+- Caching
+- Order lookups
 - Real-time counters and leaderboards
-
 
 > Relational DBs and document DBs can also be used as key-value stores if needed.
 
-### Graph Databases
-`Examples:` Neo4j, Amazon Neptune, Dgraph
+### 3. Graph Databases
+
+**Examples:** Neo4j, Amazon Neptune, Dgraph
 
 ```mermaid
 graph TB
@@ -122,15 +123,15 @@ graph TB
     style Algo fill:#fff4e1
 ```
 
-`Characteristics`
-- Represent data as `nodes`, `edges`, and `relationships`.
-- Optimized for graph queries and graph algorithms.
-- Extremely powerful for highly connected data.
-- Ideal when relationships are first-class citizens.
+**Characteristics:**
+- Represent data as `nodes`, `edges`, and `relationships`
+- Optimized for graph queries and graph algorithms
+- Extremely powerful for highly connected data
+- Ideal when relationships are first-class citizens
 
-`Use cases`
-- Social networks  
-- Recommendation engines  
-- Fraud detection  
-- Knowledge graphs  
+**Use cases:**
+- Social networks
+- Recommendation engines
+- Fraud detection
+- Knowledge graphs
 - Network topology analysis
